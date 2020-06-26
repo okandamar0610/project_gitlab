@@ -24,8 +24,9 @@ We create a VPC and all other components that you can use is following:
 
 - Create instance
 
-- SSH to instance Install GitLab server using "remote-exec" defined in null.resource file. remote-exec !!!!!!!!!! explaination needed?
-?
+- Creating S3 bucket
+
+- SSH to instance Install GitLab server using "remote-exec" defined in null.resource file. 
 
 We choose AWS for provider and it's in the provider.tf file.
 Terraform needs to initialize with provider AWS.
@@ -35,7 +36,8 @@ Terraform needs to initialize with provider AWS.
 ![](https://user-images.githubusercontent.com/63433671/85265268-a6088a80-b437-11ea-83eb-2fd1b413ce00.png)
 
  Run:    
->  terraform init  
+
+`terraform init`
  
  
  
@@ -50,7 +52,8 @@ Terraform needs to initialize with provider AWS.
  Once Terraform initialized with cloud provider, same time it will download plugin for you.  it's time to run terraform plan command and see what resources will be created. 
 
  Run: 
- > terraform plan -var-file devtf.vars
+ 
+ ` terraform plan -var-file devtf.vars`
  
  <img width="834" alt="Screen Shot 2020-06-25 at 5 21 31 PM" src="https://user-images.githubusercontent.com/63433671/85801467-8956a600-b708-11ea-84fa-1ac36e9ce66a.png">
 <img width="925" alt="Screen Shot 2020-06-25 at 5 21 49 PM" src="https://user-images.githubusercontent.com/63433671/85801479-8f4c8700-b708-11ea-96ea-79071aca0b67.png">
@@ -71,7 +74,7 @@ If you are happy with plan, It's time to deploy your resources with terraform ap
 
 Run: 
 
->> terraform -var-file dev.tfvars
+`terraform apply  -var-file dev.tfvars` 
 
 
 
@@ -117,4 +120,7 @@ Username: root
 Password: [the password you have set]
 Enter the login credentials, click the Sign in button and you will be redirected to the GitLab Welcome page.
 
-![](https://linuxize.com/post/how-to-install-and-configure-gitlab-on-centos-7/gitlab-welcome-page.jpg?ezimgfmt=ng:webp/ngcb26)
+Welcome to GitLab!
+
+å![](https://linuxize.com/post/how-to-install-and-configure-gitlab-on-centos-7/gitlab-welcome-page.jpg?ezimgfmt=ng:webp/ngcb26)
+
